@@ -120,7 +120,7 @@ runs:
 
         APT_GET_QUIET=""
         if [[ ${{ inputs.quiet }} == 'true' ]]; then
-          APT_GET_QUIET="-qq"
+          APT_GET_QUIET="-qq -o=Dpkg::Use-Pty=0"
         fi
 
         # ======
